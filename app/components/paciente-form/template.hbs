@@ -1,0 +1,8 @@
+{{#lf-form rules=rules as |validateFunc|}}
+  {{lf-input
+      name="nome"
+      property=model.nome
+      on-update=(action (mut model.nome))
+      validate=validateFunc
+  }}
+{{/lf-form}}
