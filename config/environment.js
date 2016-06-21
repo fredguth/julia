@@ -10,12 +10,33 @@ module.exports = function(environment) {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
+      },
+
+    emberPouch: {
+      localDb: 'local_julia',
+      remoteDb: 'http://localhost:5984/julia'
+      },
+
+    manifest: {
+      enabled: true,
+      appcacheFile: "/manifest.appcache",
+      excludePaths: ['index.html', 'tests/index.html', 'robots.txt', 'crossdomain.xml', 'testem.js'],
+      showCreateDate: true
       }
     },
 
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    contentSecurityPolicy: {
+      'connect-src': "'self'",
+      'default-src': "'self'",
+      'frame-src': "'self'",
+      'img-src': "'self' filesystem: data:",
+      'script-src': "'self'",
+      'style-src': "'self' 'unsafe-inline'"
     }
   };
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="manifest.appcache">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,15 @@
   </head>
   <body>
     {{content-for "body"}}
-
+    <script>
+      window.addEventListener('load',function(e){
+        window.applicationCache.addEventListener('updateready',function(e){
+          if (window.applicationCache.status==window.applicationCache.UPDATEREADY){window.applicationCache.swapCache();
+            window.location.reload();
+          }
+        },false);}
+      ,false);
+    </script>
     <script src="assets/vendor.js"></script>
     <script src="assets/julia.js"></script>
 

@@ -6,6 +6,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('pacientes', function() {
+    this.route('single', function() {
+      this.route('new');
+      this.route('edit');
+      this.route('delete');
+    });
+  });
 });
 
 export default Router;
