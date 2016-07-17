@@ -1,10 +1,11 @@
 {{#bs-form formLayout="horizontal" model=paciente}}
-  {{bs-form-element controlType="text" label="Nome" placeholder="Insira nome" property="nome"}}
-  {{bs-form-element controlType="text" label="Celular" placeholder="Insira número" property="telefone"}}
-  {{bs-form-element controlType="email" label="Email" placeholder="Insira Email" property="email"}}
-  {{bs-form-element controlType="text" label="CPF" placeholder="Insira CPF" property="cpf"}}
-  {{bs-form-element controlType="text" label="CEP" placeholder="Insira CEP" property="cep"}}
-  {{bs-form-element controlType="textarea" label="Endereço" placeholder="Insira Endereço completo" property="cep"}}
-  {{bs-form-element controlType="text" label="Indicado Por" placeholder="Nome"property="quem_indicou"}}
+  {{bs-form-element controlType="text" label="Nome" placeholder="Insira nome" value=nome  property="nome"}}
+  {{bs-form-element controlType="text" label="Celular" placeholder="Insira número" value=telefone  property="telefone"}}
+  {{bs-form-element controlType="email" label="Email" placeholder="Insira Email" value=email  property="email"}}
+  {{bs-form-element controlType="text" label="CPF" placeholder="Insira CPF" value=cpf  property="cpf"}}
+  {{bs-form-element controlType="text" label="CEP" placeholder="Insira CEP" value=cep  property="cep"}}
+  {{bs-form-element controlType="textarea" label="Endereço" placeholder="Insira Endereço completo" value=endereco  property="endereco"}}
+  {{bs-form-element controlType="text" label="Indicado Por" placeholder="Nome" value=quem_indicou  property="quem_indicou"}}
+  {{link-to  "cancela" 'pacientes' class="bs-button"}}
   {{bs-button defaultText=buttonText type="primary" buttonType="submit" action="submitAction"}}
 {{/bs-form}}

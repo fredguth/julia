@@ -3,16 +3,6 @@ const { Component } = Ember;
 
 export default Ember.Component.extend({
 
-  paciente: {
-    nome:         '',
-    telefone:     '',
-    email:        '',
-    cpf:          '',
-    cep:          '',
-    endereco:     '',
-    quem_indicou: '',
-  },
-
   rules: {
     _id:  'required',
     nome: 'required',

@@ -1,0 +1,9 @@
+<div class="page-header">
+  <h1>Editar Paciente</h1>
+</div>
+{{paciente-form
+    paciente = model
+    buttonText = "Salvar Edição"
+    showValues = true
+    submitAction=(route-action "editarPaciente")
+}}

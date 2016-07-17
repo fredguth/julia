@@ -1,8 +1,11 @@
-INDEX
+<div class="page-header">
+  <h1>Pacientes</h1>
+</div>
+
 {{#each model as |paciente|}}
   <ul>
-  <li>{{paciente.id}}</li>
-  <li>{{link-to paciente.nome 'pacientes.show' paciente}}</li>
+  <li>{{link-to paciente.nome 'pacientes.show' paciente}} ({{link-to 'editar' 'pacientes.edit' paciente}})</li>
   </ul>
-  <hr>
 {{/each}}
+
+{{link-to "Novo Paciente" 'pacientes.new'}}
