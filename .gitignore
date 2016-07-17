@@ -15,3 +15,9 @@
 /libpeerconnection.log
 npm-debug.log
 testem.log
+
+#pouch
+/_users
+/_replicator
+/pouch__all_dbs__
+log.txt

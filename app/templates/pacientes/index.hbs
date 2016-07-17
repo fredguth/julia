@@ -1,0 +1,8 @@
+INDEX
+{{#each model as |paciente|}}
+  <ul>
+  <li>{{paciente.id}}</li>
+  <li>{{link-to paciente.nome 'pacientes.show' paciente}}</li>
+  </ul>
+  <hr>
+{{/each}}

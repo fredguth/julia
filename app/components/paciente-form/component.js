@@ -1,13 +1,29 @@
 import Ember from 'ember';
-const { Component, Object } = Ember;
+const { Component } = Ember;
+
 export default Ember.Component.extend({
-  model: Object.create({
-    _id:  new Date().toISOString(),
-    nome: ''
-  }),
+
+  paciente: {
+    nome:         '',
+    telefone:     '',
+    email:        '',
+    cpf:          '',
+    cep:          '',
+    endereco:     '',
+    quem_indicou: '',
+  },
 
   rules: {
     _id:  'required',
-    nome: 'required'
+    nome: 'required',
+    telefone: 'required',
+    email: 'email',
+    cpf: {regex: /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/},
+
+  },
+  actions:{
+    submitAction() {
+      this.get('submitAction')(this.get('paciente'));
+    }
   }
 });

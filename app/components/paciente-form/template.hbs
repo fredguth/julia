@@ -1,8 +1,10 @@
-{{#lf-form rules=rules as |validateFunc|}}
-  {{lf-input
-      name="nome"
-      property=model.nome
-      on-update=(action (mut model.nome))
-      validate=validateFunc
-  }}
-{{/lf-form}}
+{{#bs-form formLayout="horizontal" model=paciente}}
+  {{bs-form-element controlType="text" label="Nome" placeholder="Insira nome" property="nome"}}
+  {{bs-form-element controlType="text" label="Celular" placeholder="Insira número" property="telefone"}}
+  {{bs-form-element controlType="email" label="Email" placeholder="Insira Email" property="email"}}
+  {{bs-form-element controlType="text" label="CPF" placeholder="Insira CPF" property="cpf"}}
+  {{bs-form-element controlType="text" label="CEP" placeholder="Insira CEP" property="cep"}}
+  {{bs-form-element controlType="textarea" label="Endereço" placeholder="Insira Endereço completo" property="cep"}}
+  {{bs-form-element controlType="text" label="Indicado Por" placeholder="Nome"property="quem_indicou"}}
+  {{bs-button defaultText=buttonText type="primary" buttonType="submit" action="submitAction"}}
+{{/bs-form}}

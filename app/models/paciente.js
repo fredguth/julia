@@ -4,13 +4,12 @@ import attr from 'ember-data/attr';
 
 export default Model.extend({
   rev: attr('string'),
-  _id: attr('string'),
 
   nome:         attr('string'),
   telefone:     attr('string'),
   email:        attr('string'),
-  cpf:          attr('number'),
-  cep:          attr('number'),
+  cpf:          attr('string'),
+  cep:          attr('string'),
   endereco:     attr('string'),
   quem_indicou: attr('string'),
   criado_em:    attr('date')

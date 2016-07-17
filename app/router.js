@@ -7,12 +7,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('pacientes', function() {
-    this.route('single', function() {
-      this.route('new', {path: '/new'});
-      this.route('edit');
-      this.route('delete');
-    });
+    this.route('show',{ path: '/:id'});
+    this.route('new', {path: '/new' });
+    this.route('edit', {path: '/:id/edit' });
   });
 });
-
 export default Router;
