@@ -31,6 +31,7 @@ export default Model.extend(EmberValidations, {
       length: { minimum: 6 , messages:{tooShort: "Mínimo de 6 caracteres."}}
     },
     'telefone': {
+      format: { with: /^[0-9+()-.\s]*$/, message: 'Aceita apenas telefones válidos' },
       presence: { message: "Presença obrigatória." },
 
     },
@@ -44,7 +45,7 @@ export default Model.extend(EmberValidations, {
     'cpf': {
       format: {
         allowBlank: true,
-        with:/([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/,
+        with:/^([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})$/,
         message: "Aceita apenas CPFs válidos."
       }
     },
