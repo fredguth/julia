@@ -1,0 +1,11 @@
+<div class="page-header">
+  <h1>Consultórios</h1>
+</div>
+
+{{#each model as |consultorio|}}
+  <ul>
+  <li>{{link-to consultorio.nome 'consultorios.show' consultorio}} ({{link-to 'editar' 'consultorios.edit' consultorio}})</li>
+  </ul>
+{{/each}}
+
+{{link-to "Novo Consultorio" 'consultorios.new'}}

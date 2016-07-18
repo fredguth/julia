@@ -1,7 +1,7 @@
 import Model from 'ember-data/model';
 import EmberValidations from 'ember-validations';
 import attr from 'ember-data/attr';
-//import { belongsTo } from 'ember-data/relationships';
+import { belongsTo } from 'ember-data/relationships';
 
 export default Model.extend(EmberValidations, {
   rev: attr('string'),
@@ -15,13 +15,15 @@ export default Model.extend(EmberValidations, {
   quem_indicou: attr('string'),
   criado_em:    attr('date'),
 
+  consultorio_preferencia: belongsTo('consultorio'),
+
   descriptions: [
     {key:'nome', label:'Nome:', placeholder:'Insira nome', value:'model.nome', type:'text'},
     {key:'telefone', label:'Telefone:', placeholder:'Insira telefone', value:'model.telefone', type:'text'},
     {key:'email', label:'Email:', placeholder:'Insira email', value:'model.email', type:'text'},
     {key:'cpf', label:'CPF:', placeholder:'Insira CPF', value:'model.cpf', type:'text'},
     {key:'cep', label:'CEP:', placeholder:'Insira CEP', value:'model.cep', type:'text'},
-    {key:'endereco', label:'Endereço:', placeholder:'Insira endereço', value:'model.endereco', type:'textare'},
+    {key:'endereco', label:'Endereço:', placeholder:'Insira endereço', value:'model.endereco', type:'textarea'},
     {key:'quem_indicou', label:'Indicado Por:', placeholder:'Insira quem indicou', value:'model.quem_indicou', type:'text'},
   ],
 

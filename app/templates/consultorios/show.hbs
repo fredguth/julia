@@ -1,0 +1,11 @@
+<div class="page-header">
+  <h1>Consultório <small>{{model.nome}} ({{model.sigla}})</small></h1>
+</div>
+<ul>
+<li>Nome: {{model.nome}}</li>
+<li>sigla: {{model.sigla}}</li>
+<li>Endereço: {{model.endereco}}</li>
+<li>Preço Consulta: {{model.preco_consulta}}</li>
+<li>Custo por Consulta: {{model.custo_consulta}}</li>
+</ul>
+{{link-to 'Consultórios' 'consultorios'}}
