@@ -51,7 +51,7 @@ export default Model.extend(EmberValidations, {
     'cep': {
       format: {
         allowBlank: true,
-        with:/^\\d{5}[-]\\d{3}$/,
+        with:/^[0-9]{2}[\.]?[0-9]{3}[\-]?[0-9]{3}$/,
         message: "Aceita apenas CEPs válidos."
       }
     },
