@@ -4,7 +4,7 @@ const { Component } = Ember;
 export default Ember.Component.extend({
   actions:{
     submitAction() {
-      this.get('paciente.isValid') && this.get('submitAction')(this.get('paciente'));
+      this.get('model.isValid') && this.get('submitAction')(this.get('model'));
     }
   }
 });
