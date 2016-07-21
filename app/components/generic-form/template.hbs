@@ -9,20 +9,18 @@
             property=description.key
       }}
     {{else}}
-    {{!-- {{bs-form-element
-            controlType='text'
-            label='XXXXXXXXX'
-            placeholder='XXXXXXXXX'
-
-      }} --}}
       {{#bs-form-element
         label=description.label
         property=description.key
       }}
-          {{#power-select selected=model.selected options=description.options placeholder=description.placeholder onchange=(action "select") as |option|}}
-            {{option.nome}}
+          {{#power-select
+              selected=model.selected
+              options=description.options
+              placeholder=description.placeholder
+              onchange=(action "select") as |option|
+          }}
+                {{option.nome}}
           {{/power-select}}
-
       {{/bs-form-element}}
     {{/unless}}
   {{/each}}
