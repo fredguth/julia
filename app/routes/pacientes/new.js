@@ -17,7 +17,9 @@ export default Ember.Route.extend({
       this.store.findRecord('consultorio', paciente.get('selected.id')).then((consultorio)=> {
         paciente.set('consultorio_preferencia', consultorio);
         paciente.set('criado_em' , new Date());
-        consultorio.get('pacientes').pushObject(paciente.save());
+        paciente.save();
+        consultorio.get('pacientes').addObject(paciente);
+        consultorio.save();
       })
 
       this.transitionTo('pacientes.show', paciente);

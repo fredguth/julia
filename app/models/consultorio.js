@@ -11,12 +11,12 @@ export default Model.extend(EmberValidations, {
   endereco:       attr('string'),
   preco_consulta: attr('number'),
   custo_consulta: attr('number'),
-  pacientes:      hasMany('pacientes',
-                  {
-                    async: true,
-                    inverse: 'consultorio_preferencia'
-                  }),
-
+  pacientes:      hasMany('paciente'),
+// ,
+//                   {
+//                     async: true,
+//                     inverse: 'consultorio_preferencia'
+//                   })
   descriptions: [
     {key:'nome', label:'Nome:', placeholder:'Insira nome', value:'model.nome', type:'text'},
     {key:'sigla', label:'Sigla:', placeholder:'Insira Sigla', value:'model.sigla', type:'text'},
