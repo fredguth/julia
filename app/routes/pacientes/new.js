@@ -1,14 +1,31 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+
   model() {
+    debugger;
     this.set('paciente', this.store.createRecord('paciente'));
-    return this.get('paciente');
+    return this.store.findAll('consultorio').then((consultorios)=>{
+      let entry = this.get('paciente.descriptions').findBy('key', 'consultorio_preferencia');
+      entry['options'] = consultorios.toArray();
+      Ember.Logger.debug('descriptions', entry);
+      this.set('paciente.selected', null);
+      return this.get('paciente');
+    });
+
+
+
+
+
   },
   actions: {
     adicionarPaciente(paciente) {
-      paciente.set('criado_em' , new Date());
-      paciente.save();
+      this.store.findRecord('consultorio', paciente.get('selected.id')).then((consultorio)=> {
+        paciente.set('consultorio_preferencia', consultorio);
+        paciente.set('criado_em' , new Date());
+        paciente.save();
+      })
+
       this.transitionTo('pacientes.show', paciente);
     }
   }
