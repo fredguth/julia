@@ -11,4 +11,5 @@
 <li>CEP: {{model.cep}}</li>
 <li>Indicado por: {{model.quem_indicou}}</li>
 </ul>
-{{link-to 'Pacientes' 'pacientes'}}
+{{!-- use model.id to force reopen model and set description --}}
+{{link-to 'Pacientes' 'pacientes'}} | {{link-to 'edit' 'pacientes.edit' model.id}}
