@@ -3,15 +3,12 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   model() {
-    this.set('paciente', this.store.createRecord('paciente'));
-    return this.store.findAll('consultorio').then((consultorios)=>{
-      let entry = this.get('paciente.descriptions').findBy('key', 'consultorio_preferencia');
-      entry['options'] = consultorios.toArray();
-      this.set('paciente.selected', null);
-      return this.get('paciente');
-    });
-
+    let paciente = this.store.createRecord('paciente');
+    paciente.setDescriptions();
+    this.set('paciente', paciente);
+    return paciente;
   },
+
   actions: {
     adicionarPaciente(paciente) {
       this.store.findRecord('consultorio', paciente.get('selected.id')).then((consultorio)=> {

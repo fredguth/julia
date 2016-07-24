@@ -4,12 +4,20 @@ export default Ember.Route.extend({
 
   model(params) {
     let pacientes = this.modelFor('pacientes');
-    this.set('paciente', pacientes.findBy('id', params.id));
-    return this.get('paciente');
+    let paciente = pacientes.findBy('id', params.id);
+    paciente.setDescriptions();
+    this.set('paciente', paciente);
+    return paciente;
   },
+
   actions: {
     editarPaciente(paciente) {
-      paciente.save();
+      this.store.findRecord('consultorio', paciente.get('selected.id')).then((consultorio)=> {
+        paciente.set('consultorio_preferencia', consultorio);
+        paciente.save();
+        consultorio.get('pacientes').addObject(paciente);
+        consultorio.save();
+      })
       this.transitionTo('pacientes.show', paciente);
     }
   }

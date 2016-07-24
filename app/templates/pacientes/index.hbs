@@ -4,7 +4,7 @@
 
 {{#each model as |paciente|}}
   <ul>
-  <li>{{link-to paciente.nome 'pacientes.show' paciente}} ({{link-to 'editar' 'pacientes.edit' paciente}})</li>
+  <li>{{link-to paciente.nome 'pacientes.show' paciente}} ({{link-to 'editar' 'pacientes.edit' paciente.id}})</li>
   </ul>
 {{/each}}
 

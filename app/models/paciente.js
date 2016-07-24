@@ -2,6 +2,9 @@ import Model from 'ember-data/model';
 import EmberValidations from 'ember-validations';
 import attr from 'ember-data/attr';
 import { belongsTo } from 'ember-data/relationships';
+import Ember from 'ember';
+
+const store = Ember.inject.service('store');
 
 export default Model.extend(EmberValidations, {
   rev: attr('string'),
@@ -59,6 +62,14 @@ export default Model.extend(EmberValidations, {
         message: "Aceita apenas CEPs válidos."
       }
     },
+  },
+
+  setDescriptions() {
+      this.set('selected', null);
+      this.store.findAll('consultorio').then((consultorios)=>{
+        let entry = this.get('descriptions').findBy('key', 'consultorio_preferencia');
+        entry['options'] = consultorios.toArray();
+      });
   }
 
 
