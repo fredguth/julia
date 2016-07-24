@@ -3,8 +3,10 @@ import EmberValidations from 'ember-validations';
 import attr from 'ember-data/attr';
 import { belongsTo } from 'ember-data/relationships';
 import Ember from 'ember';
+import moment from 'moment';
 
 const store = Ember.inject.service('store');
+const { computed } = Ember;
 
 export default Model.extend(EmberValidations, {
   rev: attr('string'),
@@ -19,12 +21,14 @@ export default Model.extend(EmberValidations, {
   consultorio: belongsTo('consultorio'),
   // nota fiscal
   descriptions: [
-    {key:'paciente', label:'Paciente:', placeholder:'Escolha Paciente', type:'select'},
+    {key:'paciente', label:'Paciente:', placeholder:'Escolha Paciente', type:'select', selectedName:'selectedPaciente'},
     // horario
-    //{key:'consultorio', label:'Consultório:', placeholder:'Escolha Consultório', type:'select'},
-    {key:'valor', label:'Valor:', placeholder:'Preço Consulta', value:'model.valor', type:'number'},
-    {key:'formaPagamento', label:'Forma de Pagamento:', placeholder:'Escolha Paciente', type:'select', selected: 'Dinheiro', options:['Dinheiro', 'Cheque', 'Depósito']},
-    {key:'atraso', label:'Atraso:', selected:0, type:'select', options:[0,15,30]},
+    {key:'consultorio', label:'Consultório:', placeholder:'Escolha Consultório', type:'select', selectedName:'selectedConsultorio'},
+
+    {key:'valor', label:'Valor:', placeholder:'Preço Consulta', value:'model.valor', type:'text'},
+    {key:'formaPagamento', label:'Forma de Pagamento:', placeholder:'Escolha Paciente', type:'select',
+       selected: 'Dinheiro', options:[{name:'Dinheiro'}, {name:'Cheque'}, {name:'Depósito'}], selectedName: 'selectedPagamento'},
+    {key:'atraso', label:'Atraso:', selected:0, type:'select', options:[{name:0},{name:15},{name:30}]},
     {key:'obs', label:'Obs.:', placeholder:'Observações...', value:'model.obs', type:'textarea'},
   ],
 
@@ -36,6 +40,14 @@ export default Model.extend(EmberValidations, {
       presence: { message: "Presença obrigatória." },
     },
   },
+
+  name: computed('paciente', 'consultorio', 'horario', function() {
+    let dia = moment(this.get('horario')).format('DD-MM-YY');
+    let hora = moment(this.get('horario')).format('ha');
+    let paciente = this.get('paciente.nome');
+    let consultorio = this.get('consultorio.sigla');
+    return `${paciente} - ${consultorio} @ ${dia}, ${hora}`;
+  }),
 
   setDescriptions() {
       this.set('selected', null);
