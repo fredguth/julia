@@ -1,0 +1,9 @@
+<div class="page-header">
+  <h1>Novo Paciente</h1>
+</div>
+{{generic-form
+    model = model
+    cancelRoute = 'atendimentos'
+    buttonText = "Adicionar Atendimento"
+    submitAction=(route-action "adicionarAtendimento")
+}}

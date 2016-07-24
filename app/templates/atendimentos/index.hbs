@@ -1,0 +1,14 @@
+<div class="page-header">
+  <h1>Atendimentos</h1>
+</div>
+
+{{#each model as |atendimento|}}
+  <ul>
+  {{!-- atendimento.id? --}}
+  <li>{{link-to atendimento.nome 'atendimentos.show' atendimento}} ({{link-to 'editar' 'atendimentos.edit' atendimento}})</li>
+  </ul>
+{{/each}}
+
+{{link-to "Voltar" 'index'}} | {{link-to "Novo Atendimento" 'atendimentos.new'}}
+
+

@@ -11,7 +11,7 @@ export default Model.extend(EmberValidations, {
   endereco:       attr('string'),
   preco_consulta: attr('number'),
   custo_consulta: attr('number'),
-  pacientes:      hasMany('paciente'),
+  pacientes:      hasMany('pacientes'),
 // ,
 //                   {
 //                     async: true,
