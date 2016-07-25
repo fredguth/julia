@@ -6,6 +6,7 @@ export default Ember.Route.extend({
     let pacientes = this.modelFor('pacientes');
     let paciente = pacientes.findBy('id', params.id);
     paciente.setDescriptions();
+    paciente.set('selected', paciente.get('consultorio_preferencia'))
     this.set('paciente', paciente);
     return paciente;
   },

@@ -1,0 +1,79 @@
+{{#bs-form formLayout="horizontal" model=model}}
+
+  {{bs-form-element
+      label='Nome:'
+      controlType='text'
+      placeholder='Insira o nome do paciente'
+      value=model.nome
+      disabled = disabled
+      property='nome'
+  }}
+  {{bs-form-element
+      label='Telefone:'
+      controlType='text'
+      placeholder='Insira o nome do paciente'
+      value=model.telefone
+      disabled = disabled
+      property='telefone'
+  }}
+
+  {{#bs-form-element
+      label='Consultório:'
+      disabled = disabled
+      property='consultorioPreferencia'
+  }}
+    {{#power-select
+        selected=model.consultorioPreferencia
+        options=consultorioList
+        placeholder='Escolha consultório'
+        value=model.consultorioPreferencia
+        onchange=(action "selectConsultorio") as |option|
+    }}
+      {{option.name}}
+    {{/power-select}}
+  {{/bs-form-element}}
+
+  {{bs-form-element
+      label='Email:'
+      controlType='email'
+      placeholder='Insira o email do paciente'
+      value=model.email
+      disabled = disabled
+      property='email'
+  }}
+  {{bs-form-element
+      label='CPF:'
+      controlType='text'
+      placeholder='Insira o CPF do paciente'
+      value=model.cpf
+      disabled = disabled
+      property='cpf'
+  }}
+  {{bs-form-element
+      label='CEP:'
+      controlType='text'
+      placeholder='Insira o CEP do paciente'
+      value=model.cep
+      disabled = disabled
+      property='cep'
+  }}
+  {{bs-form-element
+      label='Endereço:'
+      controlType='textarea'
+      placeholder='Insira o Endereço'
+      value=model.endereco
+      disabled = disabled
+      property='endereco'
+  }}
+  {{bs-form-element
+      label='Indicado Por:'
+      controlType='text'
+      placeholder='Quem indicou'
+      value=model.quemIndicou
+      disabled = disabled
+      property='quemIndicou'
+  }}
+
+  {{link-to  "Cancela" cancelRoute class="bs-button"}}
+  {{bs-button defaultText=buttonText type="primary" buttonType="submit" action="submitAction"}}
+{{/bs-form}}
