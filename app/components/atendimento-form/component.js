@@ -735,6 +735,7 @@ function accentFold (s) {
 
 
 export default Ember.Component.extend({
+  myDate: new Date(),
   matcher (option, term) {
     let text = accentFold(option.get('nome').toLowerCase());
     term = accentFold(term.toLowerCase());
