@@ -20,17 +20,6 @@ export default Model.extend(EmberValidations, {
   paciente: belongsTo('paciente'),
   consultorio: belongsTo('consultorio'),
   // nota fiscal
-  descriptions: [
-    {key:'paciente', label:'Paciente:', placeholder:'Escolha Paciente', type:'select', selectedName:'selectedPaciente'},
-    // horario
-    {key:'consultorio', label:'Consultório:', placeholder:'Escolha Consultório', type:'select', selectedName:'selectedConsultorio'},
-
-    {key:'valor', label:'Valor:', placeholder:'Preço Consulta', value:'model.valor', type:'text'},
-    {key:'formaPagamento', label:'Forma de Pagamento:', placeholder:'Escolha Paciente', type:'select',
-       selected: 'Dinheiro', options:[{name:'Dinheiro'}, {name:'Cheque'}, {name:'Depósito'}], selectedName: 'selectedPagamento'},
-    {key:'atraso', label:'Atraso:', selected:0, type:'select', options:[{name:0},{name:15},{name:30}]},
-    {key:'obs', label:'Obs.:', placeholder:'Observações...', value:'model.obs', type:'textarea'},
-  ],
 
   validations: {
     'paciente': {
@@ -47,15 +36,7 @@ export default Model.extend(EmberValidations, {
     let paciente = this.get('paciente.nome');
     let consultorio = this.get('consultorio.sigla');
     return `${paciente} - ${consultorio} @ ${dia}, ${hora}`;
-  }),
-
-  setDescriptions() {
-      this.set('selected', null);
-      this.store.findAll('consultorio').then((consultorios)=>{
-        let entry = this.get('descriptions').findBy('key', 'consultorio');
-        entry['options'] = consultorios.toArray();
-      });
-  }
+  })
 
 
 });

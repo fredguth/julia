@@ -3,23 +3,17 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   model() {
-    let atendimento = this.store.createRecord('atendimento');
-    //atendimento.setDescriptions();
-    this.set('atendimento', atendimento);
-    return atendimento;
+    return Ember.RSVP.hash({
+      atendimento: this.store.createRecord('atendimento'),
+      pacientes: this.store.findAll('paciente'),
+      consultorios: this.store.findAll('consultorio')
+    });
   },
 
   actions: {
     adicionarAtendimento(atendimento) {
-      atendimento.save();
-      // this.store.findRecord('consultorio', atendimento.get('selected.id')).then((consultorio)=> {
-      //   atendimento.set('consultorio_preferencia', consultorio);
-      //   atendimento.set('criado_em' , new Date());
-      //   atendimento.save();
-      //   consultorio.get('atendimentos').addObject(atendimento);
-      //   consultorio.save();
-      // })
-
+      // atendimento.save();
+      Ember.Logger.debug('Atendimento:',atendimento);
       this.transitionTo('atendimentos.show', atendimento);
     }
   }
