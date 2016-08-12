@@ -1,11 +1,25 @@
-<div class="page-header">
-  <h1>Consultório <small>{{model.nome}} ({{model.sigla}})</small></h1>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<div class="page-header">
+		  	<h1 class="text-info">Consultório <small>{{model.nome}} ({{model.sigla}})</small></h1>
+		  </div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<ul class="list-group">
+				<li class="list-group-item">Nome: {{model.nome}}</li>
+				<li class="list-group-item">sigla: {{model.sigla}}</li>
+				<li class="list-group-item">Endereço: {{model.endereco}}</li>
+				<li class="list-group-item">Preço Consulta: {{model.preco_consulta}}</li>
+				<li class="list-group-item">Custo por Consulta: {{model.custo_consulta}}</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		{{link-to 'Consultórios' 'consultorios'}} | {{link-to 'edit' 'consultorios.edit' model}}
+	</div>
 </div>
-<ul>
-<li>Nome: {{model.nome}}</li>
-<li>sigla: {{model.sigla}}</li>
-<li>Endereço: {{model.endereco}}</li>
-<li>Preço Consulta: {{model.preco_consulta}}</li>
-<li>Custo por Consulta: {{model.custo_consulta}}</li>
-</ul>
-{{link-to 'Consultórios' 'consultorios'}} | {{link-to 'edit' 'consultorios.edit' model}}

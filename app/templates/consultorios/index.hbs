@@ -1,11 +1,23 @@
-<div class="page-header">
-  <h1>Consultórios</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<div class="page-header">
+		  	<h1 class="text-info">Consultórios</h1>
+		  </div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			{{#each model as |consultorio|}}
+			  <ul class="list-group">
+			  	<li class="list-group-item">{{link-to consultorio.nome 'consultorios.show' consultorio}} ({{link-to 'editar' 'consultorios.edit' consultorio}})</li>
+			  </ul>
+			{{/each}}
+		</div>
+	</div>
+
+	<div class="row">
+		{{link-to "Voltar" 'index'}} | {{link-to "Novo Consultorio" 'consultorios.new'}}
+	</div>
 </div>
-
-{{#each model as |consultorio|}}
-  <ul>
-  <li>{{link-to consultorio.nome 'consultorios.show' consultorio}} ({{link-to 'editar' 'consultorios.edit' consultorio}})</li>
-  </ul>
-{{/each}}
-
-{{link-to "Voltar" 'index'}} | {{link-to "Novo Consultorio" 'consultorios.new'}}
