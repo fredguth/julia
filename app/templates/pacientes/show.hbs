@@ -1,15 +1,15 @@
 <div class="page-header">
   <h1>Paciente <small>{{model.nome}}</small></h1>
 </div>
-<ul>
-<li>Nome: {{model.nome}}</li>
-<li>Telefone: {{model.telefone}}</li>
-<li>Consultório: {{model.consultorio_preferencia.nome}} </li>
-<li>Email: {{model.email}}</li>
-<li>CPF: {{model.cpf}}</li>
-<li>Endereço: {{model.endereco}}</li>
-<li>CEP: {{model.cep}}</li>
-<li>Indicado por: {{model.quem_indicou}}</li>
+<ul class="list-group">
+	<li class="list-group-item">Nome: {{model.nome}}</li>
+	<li class="list-group-item">Telefone: {{model.telefone}}</li>
+	<li class="list-group-item">Consultório: {{model.consultorio_preferencia.nome}} </li>
+	<li class="list-group-item">Email: {{model.email}}</li>
+	<li class="list-group-item">CPF: {{model.cpf}}</li>
+	<li class="list-group-item">Endereço: {{model.endereco}}</li>
+	<li class="list-group-item">CEP: {{model.cep}}</li>
+	<li class="list-group-item">Indicado por: {{model.quem_indicou}}</li>
 </ul>
 {{!-- use model.id to force reopen model and set description --}}
 {{link-to 'Pacientes' 'pacientes'}} | {{link-to 'edit' 'pacientes.edit' model.id}}

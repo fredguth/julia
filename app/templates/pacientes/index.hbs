@@ -1,13 +1,77 @@
-<div class="page-header">
-  <h1>Pacientes</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<div class="page-header">
+		  	<h1 class="text-info">Pacientes</h1>
+		  </div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<div class="btn-group btn-group-justified" role="group" aria-label="...">
+				<a href="" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Adicionar Paciente</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<!--
+			{{#each model as |paciente|}}
+			  <ul>
+					<li>{{link-to paciente.nome 'pacientes.show' paciente}} ({{link-to 'editar' 'pacientes.edit' paciente.id}})</li>
+			  </ul>
+			{{/each}}
+			-->
+			<ul class="list-group lista-pacientes">
+				<a href="#" class="list-group-item">
+					<img src="http://static1.purepeople.com.br/people/1/24/11/@/20098-a-apresentadora-ana-maria-braga-150x150-2.jpg" class="avatar-paciente img-circle">
+					<h4 class="list-group-item-heading">Ana Maria</h4>
+					<p class="list-group-item-text">Cliente</p>
+				</a>
+				<a href="#" class="list-group-item">
+					<img src="http://static1.purepeople.com.br/people/1/24/11/@/20098-a-apresentadora-ana-maria-braga-150x150-2.jpg" class="avatar-paciente img-circle">
+					<h4 class="list-group-item-heading">Ana Maria</h4>
+					<p class="list-group-item-text">Cliente</p>
+				</a>
+				<a href="#" class="list-group-item">
+					<img src="http://static1.purepeople.com.br/people/1/24/11/@/20098-a-apresentadora-ana-maria-braga-150x150-2.jpg" class="avatar-paciente img-circle">
+					<h4 class="list-group-item-heading">Ana Maria</h4>
+					<p class="list-group-item-text">Cliente</p>
+				</a>
+				<a href="#" class="list-group-item">
+					<img src="http://static1.purepeople.com.br/people/1/24/11/@/20098-a-apresentadora-ana-maria-braga-150x150-2.jpg" class="avatar-paciente img-circle">
+					<h4 class="list-group-item-heading">Ana Maria</h4>
+					<p class="list-group-item-text">Cliente</p>
+				</a>
+		  </ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<div class="btn-group btn-group-justified" role="group" aria-label="...">
+				<div class="btn-group" role="group">
+					<a href="" class="btn btn-default"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Pacientes</a>
+				</div>
+				<div class="btn-group" role="group">
+					<a href="" class="btn btn-default"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Atendimentos</a>
+				</div>
+				<div class="btn-group" role="group">
+					<a href="" class="btn btn-default"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Consultórios</a>
+				</div>
+				<div class="btn-group" role="group">
+					<a href="" class="btn btn-default"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Financeiro</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		{{link-to "Voltar" 'index'}} | {{link-to "Novo Paciente" 'pacientes.new'}}
+	</div>
 </div>
 
-{{#each model as |paciente|}}
-  <ul>
-  <li>{{link-to paciente.nome 'pacientes.show' paciente}} ({{link-to 'editar' 'pacientes.edit' paciente.id}})</li>
-  </ul>
-{{/each}}
-
-{{link-to "Voltar" 'index'}} | {{link-to "Novo Paciente" 'pacientes.new'}}
 
 

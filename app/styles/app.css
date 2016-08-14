@@ -1,3 +1,25 @@
+body {
+	padding-top: 70px;
+}
+
 .app {
   padding-left: 20px;
+}
+
+/* reset */
+a.btn,
+button.btn {
+	box-shadow: none;
+	background-image: none;
+}
+.avatar-paciente {
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-right: 10px;
+}
+
+/* pacientes */
+.lista-pacientes {
+	margin-top: 20px;
 }
