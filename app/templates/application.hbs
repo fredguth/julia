@@ -1,3 +1,42 @@
-<div class="app">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          {{#link-to 'atendimentos'}}
+            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+            Atendimentos
+          {{/link-to}}
+        </li>
+        <li>
+          {{#link-to 'pacientes'}}
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            Pacientes
+          {{/link-to}}
+        </li>
+        <li>
+          {{#link-to 'consultorios'}}
+            <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+            Consultórios
+          {{/link-to}}
+        </li>
+       {{!--  <li>
+          {{#link-to 'financeiro'}}
+            <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+            Financeiro
+          {{/link-to}}
+        </li> --}}
+      </ul>
+    </div>
+  </div>
+</nav>
+
 {{outlet}}
-</div>

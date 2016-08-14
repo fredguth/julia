@@ -4,12 +4,14 @@
 			<div class="page-header">
 		  	<h1 class="text-info">Consultório <small>{{model.nome}} ({{model.sigla}})</small></h1>
 		  </div>
-		</div>
-	</div>
 
-	<div class="row">
-		<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 			<ul class="list-group">
+				<div class="btn-group btn-group-justified" role="group" aria-label="...">
+          {{#link-to 'consultorios.edit' model.id class="btn btn-primary btn-lg"}}
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+            Editar Consultório
+          {{/link-to}}
+        </div>
 				<li class="list-group-item">Nome: {{model.nome}}</li>
 				<li class="list-group-item">sigla: {{model.sigla}}</li>
 				<li class="list-group-item">Endereço: {{model.endereco}}</li>
@@ -19,7 +21,4 @@
 		</div>
 	</div>
 
-	<div class="row">
-		{{link-to 'Consultórios' 'consultorios'}} | {{link-to 'edit' 'consultorios.edit' model}}
-	</div>
 </div>
