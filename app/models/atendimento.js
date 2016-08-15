@@ -14,7 +14,6 @@ export default Model.extend(EmberValidations, {
   horario:        attr('date'),
   valor:          attr('number'),
   formaPagamento: attr('string'),
-  atraso:         attr('number'), // em minutos
   obs:            attr('string'),
 
   paciente: belongsTo('paciente'),
@@ -28,6 +27,7 @@ export default Model.extend(EmberValidations, {
     'valor': {
       presence: { message: "Presença obrigatória." },
     },
+
   },
 
   name: computed('paciente', 'consultorio', 'horario', function() {

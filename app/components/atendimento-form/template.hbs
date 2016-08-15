@@ -12,57 +12,83 @@
         placeholder='Escolha o paciente'
         onchange=(action (mut paciente)) as |option|
     }}
+      {{option.nome}} - {{option.telefone}}
+    {{/power-select}}
+
+  {{/bs-form-element}}
+  {{!-- {{#bs-form-element}}
+  {{paciente.telefone}}
+
+  {{/bs-form-element}} --}}
+
+  {{#bs-form-element
+      label='Consultorio:'
+      disabled = disabled
+      property='consultorio'
+  }}
+    {{#power-select
+        selected=consultorio
+        options=consultorios
+        matcher = matcher
+        placeHolder=consultorio.nome
+        onchange=(action (mut consultorio)) as |option|
+    }}
       {{option.nome}}
     {{/power-select}}
+
   {{/bs-form-element}}
-  {{bs-datetimepicker
-      date=myDate
-      stepping=15
-      locale="pt-br"
 
+  <hr/>
+  {{#bs-form-element
+      label='Data:'
+      disabled = disabled
+      property='horario'
+  }}
+    {{pick-a-date date=(readonly horario) on-selected=(action (mut horario)) placeholder="Pick a date" options=(readonly extraPickadateOptions)}}
+
+  {{/bs-form-element}}
+  {{#bs-form-element
+      label='Horário:'
+      disabled = disabled
+      property='horario'
+  }}
+  {{pick-a-time date=(readonly horario) on-selected=(action (mut horario)) placeholder="Pick a time" options=(readonly extraPickatimeOptions)}}
+  {{/bs-form-element}}
+  <hr/>
+
+  {{bs-form-element
+      label='Valor:'
+      value=valor
+      disabled = disabled
+      property='valor'
   }}
 
- {{!--  {{bs-form-element
-      label='Email:'
-      controlType='email'
-      placeholder='Insira o email do paciente'
-      value=model.email
+  {{#bs-form-element
+      label='Forma de Pagamento:'
       disabled = disabled
-      property='email'
+      property='formaPagamento'
   }}
+    {{#power-select
+        selected=formaPagamento
+        options=formasDePagamento
+        matcher = matcher
+        placeHolder=formaPagamento.nome
+        onchange=(action (mut formaPagamento)) as |option|
+    }}
+      {{option.nome}}
+    {{/power-select}}
+
+  {{/bs-form-element}}
+
   {{bs-form-element
-      label='CPF:'
+      label='Obs:'
       controlType='text'
-      placeholder='Insira o CPF do paciente'
-      value=model.cpf
+      placeholder='Qualquer observação'
+      value=obs
       disabled = disabled
-      property='cpf'
+      property='obs'
   }}
-  {{bs-form-element
-      label='CEP:'
-      controlType='text'
-      placeholder='Insira o CEP do paciente'
-      value=model.cep
-      disabled = disabled
-      property='cep'
-  }}
-  {{bs-form-element
-      label='Endereço:'
-      controlType='textarea'
-      placeholder='Insira o Endereço'
-      value=model.endereco
-      disabled = disabled
-      property='endereco'
-  }}
-  {{bs-form-element
-      label='Indicado Por:'
-      controlType='text'
-      placeholder='Quem indicou'
-      value=model.quemIndicou
-      disabled = disabled
-      property='quemIndicou'
-  }}
- --}}
+
   {{link-to  "Cancela" cancelRoute class="bs-button"}}
   {{bs-button defaultText=buttonText type="primary" buttonType="submit" action="submitAction"}}
 {{/bs-form}}

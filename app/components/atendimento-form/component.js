@@ -724,6 +724,13 @@ var accentMap = {
     'á':'a', 'é':'e', 'í':'i','ó':'o','ú':'u'
 };
 
+const formasDePagamento = [
+      { nome: 'Depósito'},
+      { nome: 'Dinheiro'},
+      { nome: 'Cheque'},
+    ];
+
+
 function accentFold (s) {
   if (!s) { return ''; }
     var ret = '';
@@ -735,7 +742,18 @@ function accentFold (s) {
 
 
 export default Ember.Component.extend({
-  myDate: new Date(),
+  horario: new Date(),
+  consultorio: Ember.computed('paciente', function() {
+    return this.get('paciente.consultorio_preferencia');
+  }),
+  valor: Ember.computed('consultorio', function() {
+    return this.get('consultorio.preco_consulta');
+  }),
+  formasDePagamento: formasDePagamento,
+  formaPagamento: formasDePagamento[0],
+  extraPickadateOptions: {},
+  extraPickatimeOptions: {interval: 15},
+
   matcher (option, term) {
     let text = accentFold(option.get('nome').toLowerCase());
     term = accentFold(term.toLowerCase());
@@ -743,6 +761,12 @@ export default Ember.Component.extend({
   },
   actions:{
     submitAction() {
+      this.set('atendimento.horario', this.get('horario'));
+      this.set('atendimento.valor', this.get('valor'));
+      this.set('atendimento.formaPagamento', this.get('formaPagamento'));
+      this.set('atendimento.obs', this.get('obs'));
+      this.set('atendimento.paciente', this.get('paciente'));
+      this.set('atendimento.consultorio', this.get('consultorio'));
       this.get('model.isValid') && this.get('submitAction')(this.get('model'));
     },
 
