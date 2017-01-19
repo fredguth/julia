@@ -12,7 +12,7 @@ export default Ember.Component.extend({
     },
 
     onChange(value, model, key) {
-      console.log("{value, model, key} = ", {value, model, key});
+      this.get('onChange') (value, model, key);
     }
   },
 
