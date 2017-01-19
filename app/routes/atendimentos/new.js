@@ -12,6 +12,7 @@ export default Ember.Route.extend({
 
   actions: {
     adicionarAtendimento(atendimento) {
+      debugger;
       atendimento.save().then(()=> {
         this.transitionTo('atendimentos.show', atendimento);
       });

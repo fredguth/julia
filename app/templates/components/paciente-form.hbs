@@ -1,0 +1,101 @@
+{{#bs-form formLayout="horizontal" model=model as |form|}}
+
+  {{form.element
+      label='CEP:'
+      property='cep'
+      placeholder='CEP do paciente'
+      value = model.cep
+
+  }}
+  {{form.element
+      label='CPF:'
+      property='cpf'
+      placeholder='CPF do paciente'
+      value = model.cpf
+
+  }}
+  <hr/>
+  {{form.element
+      label='Nome:'
+      property='nome'
+      placeholder='Nome do paciente'
+      value = model.nome
+  }}
+  {{form.element
+      label='Telefone:'
+      property='telefone'
+      placeholder='Telefone do paciente'
+      value = model.telefone
+  }}
+  {{form.element
+      label='Email:'
+      property='email'
+      placeholder='Email do paciente'
+      value = model.email
+  }}
+  <hr/>
+  <h3>Endereço:</h3>
+  {{form.element
+      label='Logradouro:'
+      property='logradouro'
+      placeholder='Logradouro do paciente (Rua, Quadra, etc)'
+      value = model.logradouro
+  }}
+  {{form.element
+      label='Número:'
+      property='numero'
+      placeholder='Número do endereço do paciente'
+      value = model.numero
+  }}
+  {{form.element
+      label='Complemento:'
+      property='complemento'
+      placeholder='Complemento do endereço do paciente'
+      value = model.complemento
+  }}
+  {{form.element
+      label='Bairro:'
+      property='bairro'
+      placeholder='Bairro do endereço do paciente'
+      value = model.bairro
+  }}
+  {{form.element
+      label='Cidade:'
+      property='cidade'
+      placeholder='Cidade do endereço do paciente'
+      value = model.cidade
+  }}
+  {{form.element
+      label='UF:'
+      property='uf'
+      placeholder='UF do endereço do paciente'
+      value = model.uf
+  }}
+  <hr/>
+  {{!-- {{#form.element
+      label='Consultorio:'
+      disabled = disabled
+      property='consultorio'
+  }}
+    {{#power-select
+        selected=consultorio
+        options=consultorios
+        matcher = matcher
+        placeHolder=consultorio.nome
+        onchange=(action (mut consultorio)) as |option|
+    }}
+      {{option.nome}}
+    {{/power-select}}
+
+  {{/form.element}}
+ --}}
+  <hr/>
+  {{form.element
+      label='Quem indicou:'
+      property='quem_indicou'
+      placeholder='Pessoa que indicou'
+      value = model.quem_indicou
+  }}
+  {{link-to  "Cancela" cancelRoute class="bs-button"}}
+  {{bs-button defaultText=buttonText buttonType="submit" type="primary"  onClick=(action "submitAction")}}
+{{/bs-form}}

@@ -4,7 +4,12 @@ const { Component } = Ember;
 export default Ember.Component.extend({
   actions:{
     submitAction() {
-      this.get('model.isValid') && this.get('submitAction')(this.get('model'));
+      if (this.get('model.isValid')) {
+        this.get('submitAction')(this.get('model'));
+      } else {
+        debugger;
+        this.get('model').rollbackAttributes();
+      }
     },
 
     select(option) {
