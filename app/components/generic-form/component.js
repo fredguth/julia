@@ -9,6 +9,10 @@ export default Ember.Component.extend({
 
     select(option) {
       this.set('model.selected', option);
+    },
+
+    onChange(value, model, key) {
+      console.log("{value, model, key} = ", {value, model, key});
     }
   },
 

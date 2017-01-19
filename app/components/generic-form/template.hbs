@@ -1,15 +1,16 @@
-{{#bs-form formLayout="horizontal" model=model}}
+{{#bs-form formLayout="horizontal" model=model as |form|}}
   {{#each model.descriptions as |description|}}
     {{#unless (eq description.type 'select')}}
-      {{bs-form-element
+      {{form.element
             controlType=description.type
             label=description.label
             placeholder=description.placeholder
             value=description.value
             property=description.key
+            onChange=(action 'onChange')
       }}
     {{else}}
-      {{#bs-form-element
+      {{#form.element
         label=description.label
         property=description.key
       }}
@@ -21,7 +22,7 @@
           }}
                 {{option.nome}}
           {{/power-select}}
-      {{/bs-form-element}}
+      {{/form.element}}
     {{/unless}}
   {{/each}}
 
