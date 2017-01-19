@@ -767,7 +767,7 @@ export default Ember.Component.extend({
       this.set('atendimento.obs', this.get('obs'));
       this.set('atendimento.paciente', this.get('paciente'));
       this.set('atendimento.consultorio', this.get('consultorio'));
-      this.get('model.isValid') && this.get('submitAction')(this.get('model'));
+      this.get('atendimento.isValid') && this.get('submitAction')(this.get('atendimento'));
     },
 
     // selectPaciente(option) {
