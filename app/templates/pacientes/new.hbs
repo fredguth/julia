@@ -5,10 +5,10 @@
 		  	<h1 class="text-info">Novo Paciente</h1>
 		  </div>
 			{{paciente-form
-			    model = model
+			    paciente = model.paciente
+			    consultorios = model.consultorios
 			    cancelRoute = 'pacientes'
 			    buttonText = "Adicionar Paciente"
-			    onChange = (route-action "onChange")
 			    submitAction=(route-action "adicionarPaciente")
 			}}
 		</div>

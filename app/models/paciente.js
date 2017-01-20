@@ -26,22 +26,6 @@ export default Model.extend(EmberValidations, {
 
   consultorio_preferencia: belongsTo('consultorio'),
 
-  descriptions: [
-    {key:'cpf', label:'CPF:', placeholder:'Insira CPF', value:'model.cpf', type:'text'},
-    {key:'cep', label:'CEP:', placeholder:'Insira CEP', value:'model.cep', type:'text'},
-    {key:'nome', label:'Nome:', placeholder:'Insira nome', value:'model.nome', type:'text'},
-    {key:'telefone', label:'Telefone:', placeholder:'Insira telefone', value:'model.telefone', type:'text'},
-    {key:'email', label:'Email:', placeholder:'Insira email', value:'model.email', type:'text'},
-    {key:'logradouro', label:'Logradouro:', placeholder:'Insira logradouro', value:'model.logradouro', type:'text'},
-    {key:'numero', label:'Número:', placeholder:'Insira número no logradouro', value:'model.numero', type:'text'},
-    {key:'complemento', label:'Complemento:', placeholder:'Insira complemento', value:'model.complemento', type:'text'},
-    {key:'bairro', label:'Bairro:', placeholder:'Insira bairro', value:'model.bairro', type:'text'},
-    {key:'cidade', label:'Cidade:', placeholder:'Insira cidade', value:'model.cidade', type:'text'},
-    {key:'uf', label:'UF:', placeholder:'Insira uf', value:'model.uf', type:'text'},
-    {key:'consultorio_preferencia', label:'Consultório de Preferência:', placeholder:'Escolha Consultório', type:'select', selectedName: 'selectedConsultorio'},
-    {key:'quem_indicou', label:'Indicado Por:', placeholder:'Insira quem indicou', value:'model.quem_indicou', type:'text'},
-  ],
-
   name: alias ('nome'),
 
   validations: {

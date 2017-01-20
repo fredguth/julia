@@ -1,25 +1,25 @@
-{{#bs-form formLayout="horizontal" model=model as |form|}}
+{{#bs-form formLayout="horizontal" model=paciente as |form|}}
 
-  {{form.element
-      label='CEP:'
-      property='cep'
-      placeholder='CEP do paciente'
-      value = model.cep
-
-  }}
   {{form.element
       label='CPF:'
       property='cpf'
       placeholder='CPF do paciente'
-      value = model.cpf
+      onChange=(action "onCPFChange")
 
   }}
+  {{form.element
+      label='CEP:'
+      property='cep'
+      placeholder='CEP do paciente'
+      onChange=(action "onCEPChange")
+
+  }}
+
   <hr/>
   {{form.element
       label='Nome:'
       property='nome'
       placeholder='Nome do paciente'
-      value = model.nome
   }}
   {{form.element
       label='Telefone:'

@@ -13,6 +13,10 @@ module.exports = function(environment) {
       },
     },
 
+    cpfCnpj: {
+      KEY: "5ae973d7a997af13f0aaf2bf60e65803"
+    },
+
     emberPouch: {
       localDb: 'local_julia',
       remoteDb: 'http://localhost:5984/julia'
@@ -33,7 +37,7 @@ module.exports = function(environment) {
     },
 
     contentSecurityPolicy: {
-      'connect-src': "'self'",
+      'connect-src': "'self' 'https://api.cpfcnpj.com.br' 'https://viacep.com.br' ",
       'default-src': "'self'",
       'frame-src': "'self'",
       'img-src': "'self' filesystem: data:",

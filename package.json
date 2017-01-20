@@ -24,6 +24,7 @@
     "ember-ajax": "^2.0.1",
     "ember-bootstrap": "^1.0.0-alpha.2",
     "ember-bootstrap-validations": "0.1.0",
+    "ember-browserify": "^1.1.13",
     "ember-cli": "^2.10.0",
     "ember-cli-app-version": "^1.0.0",
     "ember-cli-babel": "^5.1.6",
@@ -49,6 +50,7 @@
     "ember-route-action-helper": "0.3.2",
     "ember-validations": "2.0.0-alpha.4",
     "ember-welcome-page": "^1.0.1",
+    "gerador-validador-cpf": "^3.1.1",
     "loader.js": "^4.0.1",
     "moment": "2.14.1",
     "moment-timezone": "0.5.5"
