@@ -1,14 +1,20 @@
 import Model from 'ember-data/model';
-import EmberValidations from 'ember-validations';
 import attr from 'ember-data/attr';
 import { belongsTo } from 'ember-data/relationships';
 import Ember from 'ember';
 import moment from 'moment';
+import { validator, buildValidations } from 'ember-cp-validations';
 
-const store = Ember.inject.service('store');
+//todo remove
+const store = Ember.inject.service();
 const { computed } = Ember;
 
-export default Model.extend(EmberValidations, {
+const Validations = buildValidations({
+  paciente: validator('presence', true),
+  valor: validator('presence', true)
+});
+
+export default Model.extend(Validations,  {
   rev: attr('string'),
 
   horario:        attr('date'),
@@ -18,17 +24,6 @@ export default Model.extend(EmberValidations, {
 
   paciente: belongsTo('paciente'),
   consultorio: belongsTo('consultorio'),
-  // nota fiscal
-
-  validations: {
-    'paciente': {
-      presence:  { message: "Presença obrigatória." },
-    },
-    'valor': {
-      presence: { message: "Presença obrigatória." },
-    },
-
-  },
 
   name: computed('paciente', 'consultorio', 'horario', function() {
     let dia = moment(this.get('horario')).format('DD-MM-YY');

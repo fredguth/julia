@@ -13,7 +13,8 @@ export default Ember.Route.extend({
   actions: {
 
     adicionarPaciente(paciente) {
-
+      console.log('adicionarPaciente');
+      debugger;
       paciente.save().then(()=> {
         this.transitionTo('pacientes.show', paciente);
       });

@@ -1,0 +1,5 @@
+- paciente edit
+- criar objeto nota fiscal
+- gerar excel (pode ser no servidor)
+- validação na criação de paciente
+

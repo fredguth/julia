@@ -64,7 +64,7 @@ export default Ember.Component.extend({
               console.error(err);
             }
           } else {
-            console.log('inválido:', value);
+            console.log('CPF inválido:', value);
           }
 
         }
@@ -72,8 +72,14 @@ export default Ember.Component.extend({
     },
 
 
-    submitAction() {
-      this.get('paciente.isValid') && this.get('submitAction')(this.get('paciente'));
+    add() {
+       this.get('paciente').validate().then(({ validations }) => {
+        if (validations.get('isValid')) {
+          this.get('submitAction')(this.get('paciente'));
+        } else {
+          console.log('invalid.')
+        }
+      });
     }
   }
 });

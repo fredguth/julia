@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   model(params) {
+    debugger;
     let pacientes = this.modelFor('pacientes');
     let paciente = pacientes.findBy('id', params.id);
     paciente.setDescriptions();
