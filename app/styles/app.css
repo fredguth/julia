@@ -1,13 +1,13 @@
-body {
+/*body {
 	padding-top: 70px;
 }
 
 .app {
   padding-left: 20px;
-}
+}*/
 
 /* reset */
-a.btn,
+/*a.btn,
 button.btn {
 	box-shadow: none;
 	background-image: none;
@@ -17,9 +17,9 @@ button.btn {
 	height: 40px;
 	float: left;
 	margin-right: 10px;
-}
+}*/
 
 /* pacientes */
-.lista-pacientes {
+/*.lista-pacientes {
 	margin-top: 20px;
-}
+}*/

@@ -1,0 +1,14 @@
+body {
+	font-family: Verdana, Geneva, sans-serif;
+
+	.main-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		width: 100%;
+		padding: 10px;
+		background-color: #f1f1f1;
+		text-align: center;
+	}
+}

@@ -1,0 +1,18 @@
+.header-invoices {
+	position: relative;
+
+	> h2 {
+		@include header-title;
+	}
+	> .new {
+		@include icon($icon-plus);
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+	}
+}
