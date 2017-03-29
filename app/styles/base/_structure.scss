@@ -43,7 +43,6 @@ body {
 		}
 		> .app-container {
 			height: calc(100% - 120px);
-			padding: 10px;
 
 			&:not(.invoices) {
 				height: calc(100% - 50px);

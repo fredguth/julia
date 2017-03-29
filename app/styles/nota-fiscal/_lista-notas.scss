@@ -1,0 +1,139 @@
+.notas {
+	height: 100%;
+
+	> header {
+		height: 30px;
+		line-height: 27px;
+		background-color: #fff;
+		border-top: 1px solid #999;
+		border-bottom: 1px solid #999;
+		padding: 0 15px;
+		color: #999;
+		font-size: 14px;
+
+		> .total {
+			color: $color-total;
+			float: right;
+		}
+	}
+	> ul {
+		width: 100%;
+		height: calc(100% - 100px);
+		background-color: #f1f1f1;
+		overflow-y: auto;
+
+		> li {
+			background-color: #fff;
+			border-radius: 5px;
+			margin: 10px;
+			padding: 10px;
+
+			> header {
+				@include clearfix;
+				width: 100%;
+				display: block;
+
+				> div {
+					float: left;
+
+					&.avatar {
+						> span {
+							display: block;
+							width: 30px;
+							height: 30px;
+							border-radius: 50%;
+							background-color: grey;
+							margin-right: 5px;
+						}
+					}
+					&.info {
+						> span {
+							display: block;
+							font-size: 12px;
+							line-height: 16px;
+
+							&:last-child {
+								color: #999;
+							}
+							> .icon {
+								@include icon($icon-phone, 8);
+							}
+						}
+					}
+					&.total {
+						float: right;
+
+						> span {
+							position: relative;
+							color: $color-total;
+							font-size: 28px;
+
+							&:after {
+								content: "R$";
+								position: absolute;
+								top: 3px;
+								left: -20px;
+								font-size: 12px;
+							}
+						}
+					}
+				}
+			}
+			> footer {
+				@include clearfix;
+				width: 100%;
+				display: block;
+				margin-top: 10px;
+				padding-top: 10px;
+				border-top: 1px solid #f1f1f1;
+				color: #999;
+
+				> div {
+					float: left;
+
+					&.nf {
+						font-size: 12px;
+
+						> .icon {
+							@include icon($icon-file-text);
+							color: $color-total;
+						}
+					}
+					&.status {
+						float: right;
+						font-size: 10px;
+
+						> .icon {
+							&.checking {
+								@include icon($icon-checking);
+							}
+							&.waiting {
+								@include icon($icon-time);
+							}
+							&.checked {
+								@include icon($icon-checked);
+							}
+						}
+					}
+				}
+			}
+		}
+		> .divisor {
+			width: 100%;
+			height: 30px;
+			display: block;
+			line-height: 27px;
+			background-color: #fff;
+			border-top: 1px solid #999;
+			border-bottom: 1px solid #999;
+			padding: 0 15px;
+			color: #999;
+			font-size: 14px;
+
+			> .total {
+				color: $color-total;
+				float: right;
+			}
+		}
+	}
+}

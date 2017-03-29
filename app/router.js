@@ -6,6 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('notas', function() {
+    this.route('notas', {path: '/notas' });
+  });
   this.route('pacientes', function() {
     this.route('show',{ path: '/:id'});
     this.route('new', {path: '/new' });
