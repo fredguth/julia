@@ -1,14 +1,53 @@
 body {
 	font-family: Verdana, Geneva, sans-serif;
 
-	.main-header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 10;
-		width: 100%;
-		padding: 10px;
-		background-color: #f1f1f1;
-		text-align: center;
+	> .ember-view {
+		min-height: 100% !important;
+		height: 100%;
+		overflow: hidden;
+
+		> .app-top {
+			width: 100%;
+			background-color: #f1f1f1;
+
+			> header {
+				text-align: center;
+				height: 50px;
+				line-height: 50px;
+				position: relative;
+
+				> h2 {
+					font-weight: bold;
+					letter-spacing: 1px;
+				}
+				> .back,
+				> .new {
+					display: block;
+					position: absolute;
+					top: 0;
+					width: 50px;
+					height: 50px;
+					text-align: center;
+					line-height: 50px;
+				}
+				> .back {
+					@include icon($icon-arrow-left);
+					left: 0;
+					display: none;
+				}
+				> .new {
+					@include icon($icon-plus);
+					right: 0;
+				}
+			}
+		}
+		> .app-container {
+			height: calc(100% - 120px);
+			padding: 10px;
+
+			&:not(.invoices) {
+				height: calc(100% - 50px);
+			}
+		}
 	}
 }

@@ -1,0 +1,40 @@
+.current-date {
+	height: 70px;
+
+	> .weeks {
+		@include clearfix;
+		width: 100%;
+
+		> span {
+			display: block;
+			width: calc(100% / 7);
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			font-size: 10px;
+			float: left;
+
+			&:first-child,
+			&:last-child {
+				opacity: .4;
+			}
+		}
+	}
+	> .days {
+		@include clearfix;
+		height: 50px;
+
+		span {
+			display: block;
+			width: calc(100% / 7);
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+
+			&.sunday,
+			&.saturday {
+				opacity: .4;
+			}
+		}
+	}
+}

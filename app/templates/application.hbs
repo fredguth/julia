@@ -1,6 +1,16 @@
-<header class="main-header">
-  {{online-invoices/header-invoices}}
-</header>
+<div class="app-top">
+  <header>
+    <a class="back"></a>
+    <h2>Notas</h2>
+    <a class="new"></a>
+  </header>
+
+  {{online-invoices/current-date}}
+</div>
+
+<div class="app-container">
+  {{outlet}}
+</div>
 
 <!-- <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
@@ -43,4 +53,3 @@
   </div>
 </nav> -->
 
-<!-- {{outlet}} -->
