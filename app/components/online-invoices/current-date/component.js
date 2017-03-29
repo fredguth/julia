@@ -2,5 +2,5 @@ import Ember from 'ember';
 const { Component } = Ember;
 
 export default Ember.Component.extend({
-	classNames: ['header-invoices']
+	classNames: ['current-date']
 });
