@@ -3,5 +3,5 @@ const { Component } = Ember;
 
 export default Ember.Component.extend({
 	tagName: 'li',
-	classNames: ['nota-fiscal']
+	classNames: ['lista-notas']
 });

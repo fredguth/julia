@@ -1,7 +1,8 @@
 <header>
   <div class="titulo">
     <h2>Notas</h2>
-    <a class="novo"></a>
+
+    {{#link-to 'definir-cliente' class='novo'}}{{/link-to}}
   </div>
 
 	{{nota-eletronica/calendario-notas}}
@@ -10,7 +11,7 @@
 </header>
 
 <div class="app-container notas">
-	<ul class="lista-notas">
-		{{nota-eletronica/nota-fiscal}}
+	<ul class="nota-eletronica">
+		{{nota-eletronica/lista-notas}}
 	</ul>
 </div>

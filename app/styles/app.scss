@@ -7,8 +7,17 @@
 @import "base/_mixins";
 @import "base/_extends";
 
-// nota fiscal
-@import "nota-fiscal/_calendario-notas";
-@import "nota-fiscal/_divisor-fixo";
-@import "nota-fiscal/_lista-notas";
-@import "nota-fiscal/_nota-fiscal";
+// nota eletronica
+@import "nota-eletronica/_nota-eletronica";
+@import "nota-eletronica/_calendario-notas";
+@import "nota-eletronica/_divisor-fixo";
+@import "nota-eletronica/_lista-notas";
+
+// definir cliente
+@import "definir-cliente/_definir-cliente";
+
+// inserir cliente
+@import "inserir-cliente/_inserir-cliente";
+
+// emitir comprovante
+@import "emitir-comprovante/_emitir-comprovante";
