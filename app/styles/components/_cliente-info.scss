@@ -1,0 +1,33 @@
+.cliente-info {
+	@include clearfix;
+	display: inline-block;
+
+	> .avatar {
+		float: left;
+
+		> span {
+			display: block;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background-color: grey;
+			margin-right: 5px;
+		}
+	}
+	> .info {
+		float: left;
+		
+		> span {
+			display: block;
+			font-size: 12px;
+			line-height: 16px;
+
+			&:last-child {
+				color: #999;
+			}
+			> .icone {
+				@include icon($icon-phone, 8);
+			}
+		}
+	}
+}

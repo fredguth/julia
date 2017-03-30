@@ -1,0 +1,72 @@
+.lista-notas {
+	background-color: #fff;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 10px;
+
+	> header {
+		@include clearfix;
+		width: 100%;
+		display: block;
+
+		> .info {
+			float: left;
+		}
+
+		> .total {
+			float: right;
+
+			> span {
+				position: relative;
+				color: $color-total;
+				font-size: 28px;
+
+				&:after {
+					content: "R$";
+					position: absolute;
+					top: 3px;
+					left: -20px;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	> footer {
+		@include clearfix;
+		width: 100%;
+		display: block;
+		margin-top: 10px;
+		padding-top: 10px;
+		border-top: 1px solid #f1f1f1;
+		color: #999;
+
+		> div {
+			float: left;
+
+			&.nf {
+				font-size: 12px;
+
+				> .icone {
+					@include icon($icon-invoice);
+					color: $color-total;
+				}
+			}
+			&.estado {
+				float: right;
+				font-size: 10px;
+
+				> .icone {
+					&.processando {
+						@include icon($icon-processing);
+					}
+					&.aguardando {
+						@include icon($icon-waiting);
+					}
+					&.emitida {
+						@include icon($icon-sent);
+					}
+				}
+			}
+		}
+	}
+}

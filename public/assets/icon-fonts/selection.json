@@ -22,7 +22,7 @@
       "attrs": [],
       "properties": {
         "ligatures": "file-text, file",
-        "name": "file-text",
+        "name": "invoice",
         "id": 34,
         "order": 9,
         "prevSize": 32,
@@ -83,7 +83,7 @@
       "attrs": [],
       "properties": {
         "ligatures": "hour-glass, loading",
-        "name": "time",
+        "name": "waiting",
         "id": 121,
         "order": 7,
         "prevSize": 32,
@@ -92,6 +92,37 @@
       "setIdx": 0,
       "setId": 0,
       "iconIdx": 121
+    },
+    {
+      "icon": {
+        "paths": [
+          "M992.262 871.396l-242.552-206.294c-25.074-22.566-51.89-32.926-73.552-31.926 57.256-67.068 91.842-154.078 91.842-249.176 0-212.078-171.922-384-384-384-212.076 0-384 171.922-384 384s171.922 384 384 384c95.098 0 182.108-34.586 249.176-91.844-1 21.662 9.36 48.478 31.926 73.552l206.294 242.552c35.322 39.246 93.022 42.554 128.22 7.356s31.892-92.898-7.354-128.22zM384 640c-141.384 0-256-114.616-256-256s114.616-256 256-256 256 114.616 256 256-114.614 256-256 256z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "search",
+          "magnifier",
+          "magnifying-glass",
+          "inspect",
+          "find"
+        ],
+        "defaultCode": 59782,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "search, magnifier",
+        "name": "search",
+        "id": 134,
+        "order": 10,
+        "prevSize": 32,
+        "code": 59782
+      },
+      "setIdx": 0,
+      "setId": 0,
+      "iconIdx": 134
     },
     {
       "icon": {
@@ -112,7 +143,7 @@
       "attrs": [],
       "properties": {
         "ligatures": "plus, add",
-        "name": "plus",
+        "name": "add",
         "id": 266,
         "order": 3,
         "prevSize": 32,
@@ -143,7 +174,7 @@
       "attrs": [],
       "properties": {
         "ligatures": "checkmark, tick",
-        "name": "checked",
+        "name": "sent",
         "id": 272,
         "order": 4,
         "prevSize": 32,
@@ -174,7 +205,7 @@
       "attrs": [],
       "properties": {
         "ligatures": "checkmark2, tick2",
-        "name": "checking",
+        "name": "processing",
         "id": 273,
         "order": 5,
         "prevSize": 32,
@@ -203,7 +234,7 @@
       "attrs": [],
       "properties": {
         "ligatures": "arrow-left2, left4",
-        "name": "arrow-left",
+        "name": "back",
         "id": 320,
         "order": 2,
         "prevSize": 32,
@@ -212,6 +243,63 @@
       "setIdx": 0,
       "setId": 0,
       "iconIdx": 320
+    },
+    {
+      "icon": {
+        "paths": [
+          "M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512 512-229.23 512-512-229.23-512-512-512zM512 896c-212.078 0-384-171.922-384-384s171.922-384 384-384c212.078 0 384 171.922 384 384s-171.922 384-384 384zM320 512c0-106.039 85.961-192 192-192s192 85.961 192 192c0 106.039-85.961 192-192 192s-192-85.961-192-192z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "radio-checked",
+          "radio-button"
+        ],
+        "defaultCode": 59988,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "radio-checked, radio-button",
+        "name": "checked",
+        "id": 340,
+        "order": 12,
+        "prevSize": 32,
+        "code": 59988
+      },
+      "setIdx": 0,
+      "setId": 0,
+      "iconIdx": 340
+    },
+    {
+      "icon": {
+        "paths": [
+          "M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512 512-229.23 512-512-229.23-512-512-512zM512 896c-212.078 0-384-171.922-384-384s171.922-384 384-384c212.078 0 384 171.922 384 384s-171.922 384-384 384z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "radio-unchecked",
+          "radio-button",
+          "circle"
+        ],
+        "defaultCode": 59990,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "radio-unchecked, radio-button3",
+        "name": "unchecked",
+        "id": 342,
+        "order": 11,
+        "prevSize": 32,
+        "code": 59990
+      },
+      "setIdx": 0,
+      "setId": 0,
+      "iconIdx": 342
     }
   ],
   "height": 1024,

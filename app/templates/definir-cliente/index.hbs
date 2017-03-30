@@ -8,10 +8,31 @@
 
 <div class="app-container">
 	<div class="definir-cliente">
-		<h1>Definir cliente</h1><br><br>
+		<div class="busca">
+			<span class="icone"></span>
+			<input type="text" placeholder="Buscar cliente">
+		</div>
 
-		{{#link-to 'inserir-cliente'}}inserir cliente{{/link-to}}<br><br>
+		<ul class="lista">
+			<li>
+				{{cliente-info}}
+				<span class="icone"></span>
+			</li>
+			<li class="checked">
+				{{cliente-info}}
+				<span class="icone"></span>
+			</li>
+			<li>
+				{{cliente-info}}
+				<span class="icone"></span>
+			</li>
+		</ul>
 
-		{{#link-to 'emitir-comprovante'}}emitir comprovante{{/link-to}}
+		<footer>
+			{{#link-to 'inserir-cliente' class='adicionar'}}
+				<span class="icone"></span>
+				Adicionar cliente
+			{{/link-to}}
+		</footer>
 	</div>
 </div>
