@@ -1,10 +1,16 @@
-<div class="notas">
-	<header>
-		<span>Quinta, 16 de junho de 2017</span>
-		<span class="total">1.500</span>
-	</header>
+<header>
+  <div class="titulo">
+    <h2>Notas</h2>
+    <a class="novo"></a>
+  </div>
 
-	<ul>
-		{{nota-fiscal/lista-notas}}
+	{{nota-eletronica/calendario-notas}}
+
+	{{nota-eletronica/divisor-fixo}}
+</header>
+
+<div class="app-container notas">
+	<ul class="lista-notas">
+		{{nota-eletronica/nota-fiscal}}
 	</ul>
 </div>

@@ -5,7 +5,10 @@
 @import "base/_colors";
 @import "base/_structure";
 @import "base/_mixins";
+@import "base/_extends";
 
 // nota fiscal
+@import "nota-fiscal/_calendario-notas";
+@import "nota-fiscal/_divisor-fixo";
 @import "nota-fiscal/_lista-notas";
-@import "nota-fiscal/_fixed-divisor";
+@import "nota-fiscal/_nota-fiscal";

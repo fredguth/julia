@@ -1,7 +1,7 @@
-.fixed-divisor {
+.calendario-notas {
 	height: 70px;
 
-	> .weeks {
+	> .semanas {
 		@include clearfix;
 		width: 100%;
 
@@ -20,7 +20,7 @@
 			}
 		}
 	}
-	> .days {
+	> .dias {
 		@include clearfix;
 		height: 50px;
 
@@ -31,8 +31,8 @@
 			line-height: 50px;
 			text-align: center;
 
-			&.sunday,
-			&.saturday {
+			&.domingo,
+			&.sabado {
 				opacity: .4;
 			}
 		}
