@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'julia-icons';
-    src: url('../assets/icon-fonts/julia-icons.eot?bopnr5');
-    src: url('../assets/icon-fonts/julia-icons.eot?bopnr5#iefix') format('embedded-opentype'),
-         url('../assets/icon-fonts/julia-icons.ttf?bopnr5') format('truetype'),
-         url('../assets/icon-fonts/julia-icons.woff?bopnr5') format('woff'),
-         url('../assets/icon-fonts/julia-icons.svg?bopnr5#julia-icons') format('svg');
+    font-family: 'icomoon';
+    src: url('../assets/icon-fonts/icomoon.eot?csd6w0');
+    src: url('../assets/icon-fonts/icomoon.eot?csd6w0#iefix') format('embedded-opentype'),
+         url('../assets/icon-fonts/icomoon.ttf?csd6w0') format('truetype'),
+         url('../assets/icon-fonts/icomoon.woff?csd6w0') format('woff'),
+         url('../assets/icon-fonts/icomoon.svg?csd6w0#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -21,6 +21,8 @@ $icon-search: "\e906";
 $icon-sent: "\e907";
 $icon-arrow-left: "\e908";
 $icon-plus: "\e909";
+$icon-register: "\e90a";
+$icon-send: "\e90b";
 
 @mixin icon-content($content) {
   &::before {
@@ -32,7 +34,7 @@ $icon-plus: "\e909";
   @include icon-content($content);
 
   &::before {
-    font-family: 'julia-icons' !important;
+    font-family: 'icomoon' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;

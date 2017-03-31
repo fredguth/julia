@@ -1,2 +1,106 @@
 .emitir-comprovante {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+
+	> .form {
+		height: calc(100% - 50px);
+		overflow-y: auto;
+
+		> div {
+			margin: 0 10px 10px 10px;
+			padding: 10px;
+
+			> h2 {
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-size: 10px;
+				margin-bottom: 10px;
+			}
+
+			> .info {
+				@include clearfix;
+
+				> input {
+					@extend .input;
+					padding-left: 10px;
+					width: 100%;
+					float: left;
+
+					&.cnpj {
+						width: calc(80% - 10px);
+						margin-right: 10px;
+						margin-bottom: 10px;
+					}
+					&.uf {
+						width: 20%;
+					}
+					&.servico {
+						margin-bottom: 10px;
+					}
+					&.iss {
+						width: 20%;
+					}
+					&.codigo {
+						width: calc(80% - 10px);
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+		> nav {
+			@include clearfix;
+
+			ul {
+				li {
+					a {
+						width: 50%;
+						float: left;
+						padding: 10px;
+						text-align: center;
+						color: $color-btn;
+						border: 1px solid $color-btn;
+
+						&.nf {
+							border-radius: 5px 0 0 5px;
+
+							> .icone {
+								@include icon($icon-invoice)
+							}
+						}
+						&.registro {
+							border-radius: 0 5px 5px 0;
+
+							> .icone {
+								@include icon($icon-register)
+							}
+						}
+						&.ativo {
+							background-color: $color-btn;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+	> footer {
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+		background-color: $color-total;
+		color: #fff;
+
+		> .emitir {
+			display: inline-block;
+
+			> .icone {
+				@include icon($icon-send);
+			}
+		}
+	}
 }

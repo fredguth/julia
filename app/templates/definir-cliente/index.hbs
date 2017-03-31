@@ -14,17 +14,11 @@
 		</div>
 
 		<ul class="lista">
-			<li>
-				{{cliente-info}}
-				<span class="icone"></span>
-			</li>
 			<li class="checked">
-				{{cliente-info}}
-				<span class="icone"></span>
-			</li>
-			<li>
-				{{cliente-info}}
-				<span class="icone"></span>
+				{{#link-to 'emitir-comprovante'}}
+					{{cliente-info}}
+					<span class="icone"></span>
+				{{/link-to}}
 			</li>
 		</ul>
 

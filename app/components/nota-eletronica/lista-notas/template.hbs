@@ -8,14 +8,26 @@
 	</div>
 </header>
 
-<footer>
+<footer class="emitida {{status}}">
 	<div class="nf">
-		<span class="icone"></span>
-		NF 123456789
+		<span class="icone {{type}}"></span>
+
+		{{#if (eq type 'nota')}}
+			NF 123456789
+		{{else}}
+			REG 123456789
+		{{/if}}
 	</div>
+
 	<div class="estado">
-		Emitida
-		<span class="icone emitida"></span>
-		<!-- classes: emitida, aguardando, processando -->
+		<span class="icone {{status}}"></span>
+
+		{{#if (eq status 'aguardando')}}
+			Aguardando
+		{{else if (eq status 'emitida')}}
+			Emitida
+		{{else}}
+			Processando
+		{{/if}}
 	</div>
 </footer>

@@ -25,3 +25,10 @@
 		float: right;
 	}
 }
+.input {
+	height: 40px;
+	padding: 0 10px 0 40px;
+	border: 1px solid $color-bg;
+	border-radius: 5px;
+	color: $color-txt;
+}
