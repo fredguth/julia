@@ -2,25 +2,25 @@
 
 @font-face {
     font-family: 'julia-icons';
-    src: url('../assets/icon-fonts/julia-icons.eot?kok68r');
-    src: url('../assets/icon-fonts/julia-icons.eot?kok68r#iefix') format('embedded-opentype'),
-         url('../assets/icon-fonts/julia-icons.ttf?kok68r') format('truetype'),
-         url('../assets/icon-fonts/julia-icons.woff?kok68r') format('woff'),
-         url('../assets/icon-fonts/julia-icons.svg?kok68r#julia-icons') format('svg');
+    src: url('../assets/icon-fonts/julia-icons.eot?bopnr5');
+    src: url('../assets/icon-fonts/julia-icons.eot?bopnr5#iefix') format('embedded-opentype'),
+         url('../assets/icon-fonts/julia-icons.ttf?bopnr5') format('truetype'),
+         url('../assets/icon-fonts/julia-icons.woff?bopnr5') format('woff'),
+         url('../assets/icon-fonts/julia-icons.svg?bopnr5#julia-icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-$icon-invoice: "\e922";
-$icon-phone: "\e942";
-$icon-waiting: "\e979";
-$icon-search: "\e986";
-$icon-add: "\ea0a";
-$icon-sent: "\ea10";
-$icon-processing: "\ea11";
-$icon-back: "\ea40";
-$icon-checked: "\ea54";
-$icon-unchecked: "\ea56";
+$icon-check: "\e900";
+$icon-checked: "\e901";
+$icon-clock: "\e902";
+$icon-invoice: "\e903";
+$icon-phone: "\e904";
+$icon-processing: "\e905";
+$icon-search: "\e906";
+$icon-sent: "\e907";
+$icon-arrow-left: "\e908";
+$icon-plus: "\e909";
 
 @mixin icon-content($content) {
   &::before {

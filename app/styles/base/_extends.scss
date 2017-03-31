@@ -2,10 +2,10 @@
 	height: 30px;
 	line-height: 27px;
 	background-color: #fff;
-	border-top: 1px solid #999;
-	border-bottom: 1px solid #999;
+	border-top: 1px solid $color-txt;
+	border-bottom: 1px solid $color-txt;
 	padding: 0 15px;
-	color: #999;
+	color: $color-txt;
 	font-size: 14px;
 }
 .divisor {
@@ -14,10 +14,10 @@
 	display: block;
 	line-height: 27px;
 	background-color: #fff;
-	border-top: 1px solid #999;
-	border-bottom: 1px solid #999;
+	border-top: 1px solid $color-txt;
+	border-bottom: 1px solid $color-txt;
 	padding: 0 15px;
-	color: #999;
+	color: $color-txt;
 	font-size: 14px;
 
 	> .total {

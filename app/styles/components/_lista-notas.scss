@@ -3,6 +3,7 @@
 	border-radius: 5px;
 	margin: 10px;
 	padding: 10px;
+	color: $color-txt;
 
 	> header {
 		@include clearfix;
@@ -37,8 +38,7 @@
 		display: block;
 		margin-top: 10px;
 		padding-top: 10px;
-		border-top: 1px solid #f1f1f1;
-		color: #999;
+		border-top: 1px solid $color-bg;
 
 		> div {
 			float: left;
@@ -60,7 +60,7 @@
 						@include icon($icon-processing);
 					}
 					&.aguardando {
-						@include icon($icon-waiting);
+						@include icon($icon-clock);
 					}
 					&.emitida {
 						@include icon($icon-sent);

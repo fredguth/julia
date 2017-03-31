@@ -1,5 +1,6 @@
 .calendario-notas {
 	height: 70px;
+	color: $color-txt;
 
 	> .semanas {
 		@include clearfix;

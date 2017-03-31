@@ -1,6 +1,7 @@
 .cliente-info {
 	@include clearfix;
 	display: inline-block;
+	color: $color-txt;
 
 	> .avatar {
 		float: left;
@@ -10,7 +11,7 @@
 			width: 30px;
 			height: 30px;
 			border-radius: 50%;
-			background-color: grey;
+			background-color: $color-bg;
 			margin-right: 5px;
 		}
 	}
@@ -23,7 +24,7 @@
 			line-height: 16px;
 
 			&:last-child {
-				color: #999;
+				opacity: .6;
 			}
 			> .icone {
 				@include icon($icon-phone, 8);

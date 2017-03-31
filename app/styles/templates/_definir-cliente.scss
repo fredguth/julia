@@ -17,14 +17,15 @@
 			left: 0;
 			top: 0;
 			pointer-events: none;
-			color: #999;
+			color: $color-txt;
 		}
 		> input {
 			width: 100%;
 			height: 40px;
 			padding: 0 10px 0 40px;
-			border: 1px solid #999;
+			border: 1px solid $color-bg;
 			border-radius: 5px;
+			color: $color-txt;
 		}
 	}
 	> .lista {
@@ -35,14 +36,14 @@
 			position: relative;
 			margin: 10px;
 			padding: 10px;
-			border-bottom: 1px solid #f1f1f1;
+			border-bottom: 1px solid $color-bg;
 
 			> .icone {
-				@include icon($icon-unchecked);
+				@include icon($icon-check);
 				position: absolute;
 				top: 50%;
 				right: 0;
-				color: #999;
+				color: $color-bg;
 				transform: translateY(-50%);
 			}
 			&.checked {
@@ -68,7 +69,7 @@
 			display: inline-block;
 
 			> .icone {
-				@include icon($icon-add);
+				@include icon($icon-plus);
 			}
 		}
 	}

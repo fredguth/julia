@@ -8,13 +8,14 @@ body {
 
 		> header {
 			width: 100%;
-			background-color: #f1f1f1;
+			background-color: $color-bg;
 
 			> .titulo {
 				text-align: center;
 				height: 50px;
 				line-height: 50px;
 				position: relative;
+				color: $color-txt;
 
 				> h2 {
 					letter-spacing: 1px;
@@ -31,18 +32,18 @@ body {
 					line-height: 50px;
 				}
 				> .voltar {
-					@include icon($icon-back);
+					@include icon($icon-arrow-left);
 					left: 0;
 				}
 				> .novo {
-					@include icon($icon-add);
+					@include icon($icon-plus);
 					right: 0;
 				}
 			}
 		}
 		> .app-container {
 			height: calc(100% - 150px);
-			background-color: #f1f1f1;
+			background-color: $color-bg;
 
 			&:not(.notas) {
 				height: calc(100% - 50px);
