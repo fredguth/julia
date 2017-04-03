@@ -23,7 +23,6 @@
 
 				> input {
 					@extend .input;
-					padding-left: 10px;
 					width: 100%;
 					float: left;
 
@@ -60,19 +59,20 @@
 						text-align: center;
 						color: $color-btn;
 						border: 1px solid $color-btn;
+						font-size: 12px;
 
 						&.nf {
 							border-radius: 5px 0 0 5px;
 
 							> .icone {
-								@include icon($icon-invoice)
+								@include icon($icon-invoice, 12px)
 							}
 						}
 						&.registro {
 							border-radius: 0 5px 5px 0;
 
 							> .icone {
-								@include icon($icon-register)
+								@include icon($icon-register, 12px)
 							}
 						}
 						&.ativo {
