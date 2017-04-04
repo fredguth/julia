@@ -1,0 +1,17 @@
+<header>
+  <div class="titulo">
+    <h2>Notas</h2>
+
+    {{#link-to 'definir-cliente' class='novo'}}{{/link-to}}
+  </div>
+
+	{{nota-eletronica/calendario-notas}}
+
+	{{nota-eletronica/divisor-fixo}}
+</header>
+
+<div class="app-container notas">
+	<ul class="nota-eletronica">
+		{{nota-eletronica/lista-notas}}
+	</ul>
+</div>

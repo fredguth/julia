@@ -1,0 +1,91 @@
+.lista-notas {
+	background-color: #fff;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 10px;
+	color: $color-txt;
+
+	> header {
+		@include clearfix;
+		width: 100%;
+		display: block;
+
+		> .info {
+			float: left;
+		}
+
+		> .total {
+			float: right;
+
+			> span {
+				position: relative;
+				color: $color-total;
+				font-size: 28px;
+
+				&:after {
+					content: "R$";
+					position: absolute;
+					top: 3px;
+					left: -20px;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	> footer {
+		@include clearfix;
+		width: 100%;
+		display: block;
+		margin-top: 10px;
+		padding-top: 10px;
+		border-top: 1px solid $color-bg;
+
+		&.emitida {
+			> div {
+				&.nf,
+				&.estado {
+					> .icone {
+						color: $color-total;
+					}
+				}
+			}
+		}
+		> div {
+			float: left;
+
+			&.nf {
+				font-size: 12px;
+
+				> .icone {
+					color: $color-txt;
+
+					&.nota {
+						@include icon($icon-invoice);
+					}
+					&.registro {
+						@include icon($icon-register);
+					}
+				}
+			}
+			&.estado {
+				float: right;
+				font-size: 10px;
+
+				> .icone {
+					color: $color-txt;
+
+					&.processando {
+						@include icon($icon-processing);
+					}
+					&.aguardando {
+						@include icon($icon-clock);
+					}
+					&.emitida {
+						@include icon($icon-sent);
+						color: $color-total;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,62 @@
+.inserir-cliente {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+
+	> .form {
+		height: calc(100% - 50px);
+		overflow-y: auto;
+
+		> div {
+			@include clearfix;
+			margin: 0 10px 10px 10px;
+			padding: 10px;
+
+			> input {
+				@extend .input;
+				width: 100%;
+				float: left;
+
+				&.cpf,
+				&.nome,
+				&.email,
+				&.logradouro,
+				&.bairro {
+					margin-bottom: 10px;
+				}
+				&.numero,
+				&.uf {
+					width: 20%;
+				}
+				&.complemento {
+					width: calc(80% - 10px);
+					margin-left: 10px;
+					margin-bottom: 10px;
+				}
+				&.cidade {
+					width: calc(80% - 10px);
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+	> footer {
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+		background-color: $color-total;
+		color: #fff;
+
+		> .salvar {
+			display: inline-block;
+
+			> .icone {
+				@include icon($icon-save);
+			}
+		}
+	}
+}

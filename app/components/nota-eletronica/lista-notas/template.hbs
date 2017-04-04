@@ -1,0 +1,33 @@
+<header>
+	<div class="info">
+		{{cliente-info}}
+	</div>
+
+	<div class="total">
+		<span>450,00</span>
+	</div>
+</header>
+
+<footer class="emitida {{status}}">
+	<div class="nf">
+		<span class="icone {{type}}"></span>
+
+		{{#if (eq type 'nota')}}
+			NF 123456789
+		{{else}}
+			REG 123456789
+		{{/if}}
+	</div>
+
+	<div class="estado">
+		<span class="icone {{status}}"></span>
+
+		{{#if (eq status 'aguardando')}}
+			Aguardando
+		{{else if (eq status 'emitida')}}
+			Emitida
+		{{else}}
+			Processando
+		{{/if}}
+	</div>
+</footer>

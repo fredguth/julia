@@ -1,0 +1,63 @@
+<header>
+  <div class="titulo">
+    <h2>Emitir comprovante</h2>
+
+    {{#link-to 'nota-eletronica' class='voltar'}}{{/link-to}}
+  </div>
+</header>
+
+<div class="app-container">
+	<div class="emitir-comprovante">
+		<div class="form">
+			<div class="cliente">
+				<h2>Cliente</h2>
+
+				<div class="info">
+					{{cliente-info}}
+				</div>
+			</div>
+			
+			<div class="emissor">
+				<h2>Emissor</h2>
+
+				<div class="info">
+					<input class="cnpj" type="phone" placeholder="CNPJ">
+					<input class="uf" type="text" placeholder="UF">
+					<input class="empresa" type="text" placeholder="Empresa">
+				</div>
+			</div>
+
+			<div class="servico">
+				<h2>Serviço</h2>
+
+				<div class="info">
+					<input class="servico" type="text" placeholder="Serviço">
+					<input class="iss" type="phone" placeholder="ISS">
+					<input class="codigo" type="phone" placeholder="Código serviço">
+				</div>
+			</div>
+
+			<div class="transacao">
+				<h2>Transação</h2>
+
+				<div class="info">
+					<input class="valor" type="phone" placeholder="Valor">
+				</div>
+			</div>
+
+			<nav>
+				<ul>
+					<li><a href="" class="nf ativo"><span class="icone"></span> Nota fiscal</a></li>
+					<li><a href="" class="registro"><span class="icone"></span> Apenas registro</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<footer>
+			{{#link-to 'nota-eletronica' class='emitir'}}
+				<span class="icone"></span>
+				Emitir
+			{{/link-to}}
+		</footer>
+	</div>
+</div>

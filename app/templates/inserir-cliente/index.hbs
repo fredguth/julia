@@ -1,0 +1,40 @@
+<header>
+  <div class="titulo">
+    <h2>Inserir cliente</h2>
+
+    {{#link-to 'definir-cliente' class='voltar'}}{{/link-to}}
+  </div>
+</header>
+
+<div class="app-container">
+	<div class="inserir-cliente">
+		<div class="form">
+			<div>
+				<input class="cpf" type="phone" placeholder="CPF">
+				<input class="cep" type="phone" placeholder="CEP">
+			</div>
+
+			<div>
+				<input class="nome" type="text" placeholder="Nome">
+				<input class="email" type="email" placeholder="E-mail">
+				<input class="telefone" type="phone" placeholder="Telefone">
+			</div>
+
+			<div>
+				<input class="logradouro" type="text" placeholder="Logradouro">
+				<input class="numero" type="phone" placeholder="Nº">
+				<input class="complemento" type="text" placeholder="Complemento">
+				<input class="bairro" type="text" placeholder="Bairro">
+				<input class="cidade" type="text" placeholder="Cidade">
+				<input class="uf" type="text" placeholder="UF">
+			</div>
+		</div>
+
+		<footer>
+			{{#link-to 'emitir-comprovante' class='salvar'}}
+				<span class="icone"></span>
+				Salvar
+			{{/link-to}}
+		</footer>
+	</div>
+</div>

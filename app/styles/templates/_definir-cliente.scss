@@ -1,0 +1,78 @@
+.definir-cliente {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+
+	> .busca {
+		position: relative;
+
+		> .icone {
+			@include icon($icon-search);
+			display: block;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			position: absolute;
+			left: 0;
+			top: 0;
+			pointer-events: none;
+			color: $color-txt;
+		}
+		> input {
+			@extend .input;
+			width: 100%;
+			padding-left: 40px;
+		}
+	}
+	> .lista {
+		height: calc(100% - 80px);
+		overflow-y: auto;
+
+		li {
+			position: relative;
+			margin: 10px;
+			padding: 10px;
+			border-bottom: 1px solid $color-bg;
+
+			&.checked {
+				> a {
+					> .icone {
+						@include icon($icon-checked);
+						color: $color-total;
+					}
+				}
+			}
+			> a {
+				> .icone {
+					@include icon($icon-check);
+					position: absolute;
+					top: 50%;
+					right: 0;
+					color: $color-bg;
+					transform: translateY(-50%);
+				}
+			}
+
+		}
+	}
+	> footer {
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+		background-color: $color-total;
+		color: #fff;
+
+		> .adicionar {
+			display: inline-block;
+
+			> .icone {
+				@include icon($icon-plus);
+			}
+		}
+	}
+}

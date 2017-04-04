@@ -1,0 +1,34 @@
+.header {
+	height: 30px;
+	line-height: 27px;
+	background-color: #fff;
+	border-top: 1px solid $color-txt;
+	border-bottom: 1px solid $color-txt;
+	padding: 0 15px;
+	color: $color-txt;
+	font-size: 14px;
+}
+.divisor {
+	width: 100%;
+	height: 30px;
+	display: block;
+	line-height: 27px;
+	background-color: #fff;
+	border-top: 1px solid $color-txt;
+	border-bottom: 1px solid $color-txt;
+	padding: 0 15px;
+	color: $color-txt;
+	font-size: 14px;
+
+	> .total {
+		color: $color-total;
+		float: right;
+	}
+}
+.input {
+	height: 40px;
+	padding: 0 10px;
+	border: 1px solid $color-bg;
+	border-radius: 5px;
+	color: $color-txt;
+}

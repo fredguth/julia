@@ -1,0 +1,18 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin box-sizing($type: border-box) {
+	box-sizing: $type;
+}
+
+@mixin center-align {
+	position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

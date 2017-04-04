@@ -1,0 +1,32 @@
+<header>
+  <div class="titulo">
+    <h2>Definir cliente</h2>
+
+    {{#link-to 'nota-eletronica' class='voltar'}}{{/link-to}}
+  </div>
+</header>
+
+<div class="app-container">
+	<div class="definir-cliente">
+		<div class="busca">
+			<span class="icone"></span>
+			<input type="text" placeholder="Buscar cliente">
+		</div>
+
+		<ul class="lista">
+			<li class="checked">
+				{{#link-to 'emitir-comprovante'}}
+					{{cliente-info}}
+					<span class="icone"></span>
+				{{/link-to}}
+			</li>
+		</ul>
+
+		<footer>
+			{{#link-to 'inserir-cliente' class='adicionar'}}
+				<span class="icone"></span>
+				Adicionar cliente
+			{{/link-to}}
+		</footer>
+	</div>
+</div>
